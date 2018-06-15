@@ -1,4 +1,4 @@
-const TaskProcessor = require('./src/taskProcessor');
+const TaskProcessor = require('./src/task-processor');
 const Task = require('./src/task');
 const processor = new TaskProcessor();
 
