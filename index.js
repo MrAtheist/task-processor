@@ -1,24 +1,24 @@
-const TaskScheduler = require('./src/taskScheduler');
+const TaskProcessor = require('./src/taskProcessor');
 const Task = require('./src/task');
-const scheduler = new TaskScheduler();
+const processor = new TaskProcessor();
 
 
-scheduler.on('addTask', (e) => {
+processor.on('addTask', (e) => {
   e.processTask();
 });
 
-scheduler.addTask(new Task(123, () => {
+processor.addTask(new Task(123, () => {
   setTimeout(() => {
     console.log('FIRING AT TIME 1000ms');
   }, 1000)
 }));
 
-scheduler.addTask(new Task(456, () => {
+processor.addTask(new Task(456, () => {
   setTimeout(() => {
     console.log('FIRING AT TIME 500ms');
   }, 500)
 }));
 
-scheduler.addTask(new Task(789, () => {
+processor.addTask(new Task(789, () => {
   console.log('FIRING AT TIME 0ms!');
 }));

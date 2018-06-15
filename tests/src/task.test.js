@@ -1,10 +1,10 @@
-const TaskScheduler = require('../../src/taskScheduler');
+const TaskProcessor = require('../../src/taskProcessor');
 const Task = require('../../src/task');
 const sinon = require('sinon');
 
 
-describe('TaskScheduler: addTask', () => {
-  const task = new TaskScheduler();
+describe('TaskProcessor: addTask', () => {
+  const task = new TaskProcessor();
 
   let eventStub = sinon.stub(task, 'emit');
 

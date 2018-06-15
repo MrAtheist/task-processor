@@ -1,4 +1,4 @@
-# task-scheduler
+# task-processor
 
 ### Exercise
 
@@ -7,10 +7,10 @@ Using node.js, write a simple event based system. It should have "tasks" that ca
 
 ### Solution
 
-A task scheduler is responsible for managing the tasks, where a task is composed of a `taskId` and `action`. Every time a task is added, an event is emitted, which in turn triggers `processTask` that will process the action defined for each task.
+A task processor is responsible for managing the tasks, where a task is composed of a `taskId` and `action`. Every time a task is added, an event is emitted, which in turn triggers `processTask` that will process the action defined for each task.
 
 ### Setup
 
 * `npm i` to install the dependencies
 * `node index.js` for a simple node app
-* `node run test` to run test along with coverage
+* `npm run test` to run test along with coverage

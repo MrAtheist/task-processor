@@ -1,15 +1,15 @@
 const EventEmitter = require('events');
 
-class TaskScheduler extends EventEmitter{
+class TaskProcessor extends EventEmitter {
 
   /**
-    *  constructoR
+    *  constructor
     *  @param {Object} opts
   */
   constructor(opts = {}) {
 
     super();
-
+    // data structure to hold all the tasks
     this.tasks = [];
   }
 
@@ -39,9 +39,11 @@ class TaskScheduler extends EventEmitter{
    */
 
   processTask() {
-    return this.tasks.pop().action();
-  }
 
+    if (this.tasks.length > 0) {
+      return this.tasks.shift().action();
+    }
+  }
 }
 
-module.exports = TaskScheduler
+module.exports = TaskProcessor
